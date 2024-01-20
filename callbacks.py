@@ -1,4 +1,3 @@
-```python
 from telegram.ext import run_async
 from heroku_helper import HerokuHelper
 from io import BytesIO
@@ -46,4 +45,3 @@ def addAuthUserHandler(update, context):
     Config.AUTHORIZED_USERS.append(user_id)
     herokuHelper.addEnvVar("AUTHORIZED_USERS", " ".join(map(str, Config.AUTHORIZED_USERS)))
     message.reply_text("Authorized User.")
-```
