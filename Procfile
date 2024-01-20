@@ -1,1 +1,1 @@
-CMD:bash start.sh
+worker:bash start.sh
