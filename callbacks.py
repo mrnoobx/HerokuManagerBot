@@ -41,9 +41,9 @@ def addAuthUserHandler(update, context):
     else:
         message.reply_text("Provide Proper UserId.")
         return
-
+    
     herokuHelper = HerokuHelper(Config.HEROKU_APP_NAME, Config.HEROKU_API_KEY)
     Config.AUTHORIZED_USERS.append(user_id)
-    herokuHelper.addEnvVar("AUTHORIZED_USERS", " ".join(Config.AUTHORIZED_USERS))
+    herokuHelper.addEnvVar("AUTHORIZED_USERS", " ".join(map(str, Config.AUTHORIZED_USERS)))
     message.reply_text("Authorized User.")
 ```
