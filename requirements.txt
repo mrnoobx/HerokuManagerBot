@@ -1,2 +1,2 @@
---upgrade python-telegram-bot
+python-telegram-bot
 heroku3
