@@ -1,3 +1,2 @@
 python-telegram-bot
-run-async
 heroku3
